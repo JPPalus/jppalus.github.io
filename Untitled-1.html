@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlist</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1e1e1e; /* Fond sombre */
+            color: #dcdcdc; /* Texte clair */
+            margin: 0;
+            padding: 20px;
+        }
+        .wishlist {
+            width: 90%;
+            margin: 30px auto;
+            border-collapse: collapse;
+            background-color: #282828; /* Fond de la table */
+            border: 1px solid #00aa00; /* Bordure verte */
+            color: #ffcc00; /* Texte jaune */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        th, td {
+            text-align: left;
+            padding: 12px;
+            border-bottom: 1px solid #444; /* Ligne de séparation */
+        }
+        th {
+            background-color: #006400; /* Vert foncé pour les en-têtes */
+            color: #ffcc00; /* Texte jaune */
+        }
+        tr:hover {
+            background-color: #333333; /* Surlignage au survol */
+        }
+        .actions a {
+            text-decoration: none;
+            color: #00ff00; /* Lien vert vif */
+            font-weight: bold;
+        }
+        .actions a:hover {
+            text-decoration: underline;
+        }
+        .category-title {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 1.8em;
+            color: #ffcc00;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+    <h2 class="category-title">Wishlist : Plongée</h2>
+    <table class="wishlist">
+        <thead>
+            <tr>
+                <th>Nom de l'article</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ordinateur de plongée</td>
+                <td class="actions"><a href="#">Acheter</a></td>
+            </tr>
+            <tr>
+                <td>Combinaison étanche</td>
+                <td class="actions"><a href="#">Acheter</a></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2 class="category-title">Wishlist : Livres</h2>
+    <table class="wishlist">
+        <thead>
+            <tr>
+                <th>Nom de l'article</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Harry Potter - Edition illustrée</td>
+                <td class="actions"><a href="#">Acheter</a></td>
+            </tr>
+            <tr>
+                <td>Les Misérables</td>
+                <td class="actions"><a href="#">Acheter</a></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2 class="category-title">Wishlist : Jeux</h2>
+    <table class="wishlist">
+        <thead>
+            <tr>
+                <th>Nom de l'article</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>The Legend of Zelda: Breath of the Wild</td>
+                <td class="actions"><a href="#">Acheter</a></td>
+            </tr>
+            <tr>
+                <td>God of War: Ragnarök</td>
+                <td class="actions"><a href="#">Acheter</a></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2 class="category-title">Wishlist : Figurines</h2>
+    <table class="wishlist">
+        <thead>
+            <tr>
+                <th>Nom de l'article</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Figurine Marvel: Spider-Man</td>
+                <td class="actions"><a href="#">Acheter</a></td>
+            </tr>
+            <tr>
+                <td>Figurine Star Wars: Dark Vador</td>
+                <td class="actions"><a href="#">Acheter</a></td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
