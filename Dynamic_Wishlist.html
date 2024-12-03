@@ -1,21 +1,45 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Wishlist</title>
+    <title>Wishlist</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #1e1e1e;
-            color: #dcdcdc;
+            background-color: #1e1e1e; 
+            color: #dcdcdc; 
             margin: 0;
             padding: 20px;
         }
-        h1 {
-            text-align: center;
-            color: #ffcc00;
+        .wishlist {
+            width: 90%;
+            margin: 30px auto;
+            border-collapse: collapse;
+            background-color: #282828; 
+            border: 1px solid #00aa00; 
+            color: #ffcc00; 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        th, td {
+            text-align: left;
+            padding: 12px;
+            border-bottom: 1px solid #444; 
+        }
+        th {
+            background-color: #006400; 
+            color: #ffcc00; 
+        }
+        tr:hover {
+            background-color: #333333; 
+        }
+        .actions a {
+            text-decoration: none;
+            color: #00ff00; 
+            font-weight: bold;
+        }
+        .actions a:hover {
+            text-decoration: underline;
         }
         .category-title {
             text-align: center;
@@ -24,87 +48,91 @@
             color: #ffcc00;
             text-transform: uppercase;
         }
-        .wishlist {
-            width: 90%;
-            margin: 30px auto;
-            border-collapse: collapse;
-            background-color: #282828;
-            border: 1px solid #00aa00;
-            color: #ffcc00;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        }
-        th, td {
+        .category-subtitle {
             text-align: left;
-            padding: 12px;
-            border-bottom: 1px solid #444;
-        }
-        th {
-            background-color: #006400;
+            margin-left: 30px;
+            margin-top: 40px;
+            font-size: 1.2em;
             color: #ffcc00;
+            text-transform: uppercase;
         }
-        tr:hover {
-            background-color: #333333;
-        }
-        .actions a {
-            text-decoration: none;
-            color: #00ff00;
+        .article-name {
             font-weight: bold;
-        }
-        .actions a:hover {
-            text-decoration: underline;
         }
     </style>
 </head>
 <body>
+    <! ------------------------------------------ Plongée ------------------------------------------ -->
+    <h2 class="category-subtitle">Plongée</h2>
+    <table class="wishlist">
+        <thead>
+            <tr>
+                <th>Nom de l'article</th>
+                <th>Description</th>
+                <th>Priorité</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="article-name">Deep 6 Eddy Flippers</td>
+                <td>Taille: L - Couleur: ?</td>
+                <td></td>
+                <td class="actions"><a href="#">Acheter</a></td>
+            </tr>
+            <tr>
+                <td class="article-name">Orcatorch D710</td>
+                <td>Couleur: Même couleur que les palmes ?</td>
+                <td></td>
+                <td class="actions"><a href="#">Acheter</a></td>
+            </tr>
+            <tr>
+                <td class="article-name">Shearwater Perdix 2 Ti</td>
+                <td>Couleur: Titanium ?</td>
+                <td></td>
+                <td class="actions"><a target="_blank" rel="noopener noreferrer" href="https://shearwater.com/products/perdix-2">Site fabriquant</a></td>
+            </tr>
+            <tr>
+                <td class="article-name">Shearwater Swift Transmitter</td>
+                <td></td>
+                <td></td>
+                <td class="actions"><a target="_blank" rel="noopener noreferrer" href="https://shearwater.com/products/swift-transmitter">Site fabriquant</a></td>
+            </tr>
+        </tbody>
+    </table>
 
-    <h1>My Dynamic Wishlist</h1>
-    <div id="wishlist-container"></div>
-
-    <script>
-        async function loadWishlist() {
-            const response = await fetch('wishlist.txt');
-            const text = await response.text();
-            const categories = text.trim().split('\n\n'); // Separate categories
-
-            const container = document.getElementById('wishlist-container');
-
-            categories.forEach(category => {
-                const [title, ...items] = category.split('\n');
-                const table = document.createElement('table');
-                table.classList.add('wishlist');
-                const categoryTitle = document.createElement('h2');
-                categoryTitle.classList.add('category-title');
-                categoryTitle.textContent = title;
-                container.appendChild(categoryTitle);
-
-                table.innerHTML = `
-                    <thead>
-                        <tr>
-                            <th>Nom de l'article</th>
-                            <th>Description</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        ${items
-                            .map(item => {
-                                const [name, description] = item.split(' - ');
-                                return `
-                                    <tr>
-                                        <td>${name}</td>
-                                        <td>${description || 'No description available'}</td>
-                                        <td class="actions"><a href="#">Acheter</a></td>
-                                    </tr>`;
-                            })
-                            .join('')}
-                    </tbody>
-                `;
-                container.appendChild(table);
-            });
-        }
-
-        loadWishlist();
-    </script>
+    <! ------------------------------------------- Livres ------------------------------------------- -->
+    <h2 class="category-subtitle">Livres</h2>
+    <table class="wishlist">
+        <thead>
+            <tr>
+                <th>Nom de l'article</th>
+                <th>Auteurs</th>
+                <th>Priorité</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="article-name">The Manchu Way: The Eight Banners and Ethnic Identity in late Imperial China</td>
+                <td>Mark C. Elliott</td>
+                <td></td>
+                <td class="actions"><a href="#">Acheter</a></td>
+            </tr>
+            <tr>
+                <td class="article-name">A Translucent Mirror: History and Identity in Qing Imperial Ideology</td>
+                <td>Pamela Kyle Crossley</td>
+                <td></td>
+                <td class="actions"><a href="#">Acheter</a></td>
+            </tr>
+            <tr>
+                <td class="article-name">Orphan Warriors: Three Manchu Generations and the End of the Qing World</td>
+                <td>Pamela Kyle Crossley</td>
+                <td></td>
+                <td class="actions"><a href="#">Acheter</a></td>
+            </tr>
+        </tbody>
+    </table>
 
 </body>
 </html>
