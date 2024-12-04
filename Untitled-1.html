@@ -1,46 +1,56 @@
 <!DOCTYPE html>
+
 <html lang="fr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Wishlist</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #1e1e1e; /* Fond sombre */
-            color: #dcdcdc; /* Texte clair */
+            background-color: #1e1e1e;
+            color: #dcdcdc;
             margin: 0;
             padding: 20px;
         }
+
         .wishlist {
             width: 90%;
             margin: 30px auto;
             border-collapse: collapse;
-            background-color: #282828; /* Fond de la table */
-            border: 1px solid #00aa00; /* Bordure verte */
-            color: #ffcc00; /* Texte jaune */
+            background-color: #282828;
+            border: 1px solid #00aa00;
+            color: #ffcc00;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         }
-        th, td {
+
+        th,
+        td {
             text-align: left;
             padding: 12px;
-            border-bottom: 1px solid #444; /* Ligne de séparation */
+            border-bottom: 1px solid #444;
         }
+
         th {
-            background-color: #006400; /* Vert foncé pour les en-têtes */
-            color: #ffcc00; /* Texte jaune */
+            background-color: #006400;
+            color: #ffcc00;
         }
+
         tr:hover {
-            background-color: #333333; /* Surlignage au survol */
+            background-color: #333333;
         }
-        .actions a {
+
+        a {
             text-decoration: none;
-            color: #00ff00; /* Lien vert vif */
+            color: gold;
             font-weight: bold;
         }
-        .actions a:hover {
+
+        a:hover {
             text-decoration: underline;
         }
+
         .category-title {
             text-align: center;
             margin-top: 40px;
@@ -48,89 +58,359 @@
             color: #ffcc00;
             text-transform: uppercase;
         }
+
+        .category-subtitle {
+            text-align: left;
+            margin-left: 30px;
+            margin-top: 40px;
+            font-size: 1.2em;
+            color: #ffcc00;
+            text-transform: uppercase;
+        }
+
+        .article-name {
+            font-weight: bold;
+        }
+        
+        .table-title {
+            background-color: #333333;
+            color: #ffcc00;
+            font-weight: bold;
+            text-align: center;
+        }
     </style>
 </head>
+
 <body>
-
-    <h2 class="category-title">Wishlist : Plongée</h2>
+    <!-- ------------------------------------------ Plongée ------------------------------------------ ---->
+    <h2 class="category-subtitle">Plongée</h2>
     <table class="wishlist">
         <thead>
             <tr>
                 <th>Nom de l'article</th>
-                <th>Actions</th>
+                <th>Description</th>
+                <th>Priorité</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>Ordinateur de plongée</td>
-                <td class="actions"><a href="#">Acheter</a></td>
+                <td class="article-name"><a href="https://www.deep6gear.com/deep-6-eddy-flippers-l-green.html"
+                        rel="noopener noreferrer" target="_blank">Deep 6 Eddy Flippers</a></td>
+                <td>Taille: L - Couleur: Vert ?</td>
+                <td></td>
             </tr>
             <tr>
-                <td>Combinaison étanche</td>
-                <td class="actions"><a href="#">Acheter</a></td>
+                <td class="article-name"><a href="https://www.orcatorch.com/product/D710.html" rel="noopener noreferrer"
+                        target="_blank">Orcatorch D710</a></td>
+                <td>Couleur: Même couleur que les palmes ?</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="article-name"><a href="https://shearwater.com/products/perdix-2" rel="noopener noreferrer"
+                        target="_blank">Shearwater Perdix 2 Ti</a></td>
+                <td>Couleur: Titanium ?</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="article-name"><a href="https://shearwater.com/products/swift-transmitter"
+                        rel="noopener noreferrer" target="_blank">Shearwater Swift Transmitter</a></td>
+                <td></td>
+                <td></td>
             </tr>
         </tbody>
     </table>
-
-    <h2 class="category-title">Wishlist : Livres</h2>
+    <!-- ------------------------------------------- Livres ------------------------------------------- ---->
+    <h2 class="category-subtitle">Livres</h2>
     <table class="wishlist">
         <thead>
             <tr>
                 <th>Nom de l'article</th>
-                <th>Actions</th>
+                <th>Auteur</th>
+                <th>Édition</th>
+                <th>Priorité</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>Harry Potter - Edition illustrée</td>
-                <td class="actions"><a href="#">Acheter</a></td>
+                <td class="article-name"><a href="https://www.sup.org/books/asian-studies/manchu-way?tab=2"
+                        rel="noopener noreferrer" target="_blank">The Manchu Way: The Eight Banners and Ethnic Identity
+                        in late Imperial China</a></td>
+                <td>Mark C. Elliott</td>
+                <td>Stanford University Press</td>
+                <td></td>
             </tr>
             <tr>
-                <td>Les Misérables</td>
-                <td class="actions"><a href="#">Acheter</a></td>
+                <td class="article-name"><a href="#" rel="noopener noreferrer" target="_blank">Emperor Qianlong: Son of
+                        Heaven, Man of the World</a>
+                </td>
+                <td>Mark C. Elliott</td>
+                <td>Pearson</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="article-name"><a href="https://www.ucpress.edu/books/a-translucent-mirror/paper"
+                        rel="noopener noreferrer" target="_blank">A Translucent Mirror: History and Identity in Qing
+                        Imperial Ideology</a></td>
+                <td>Pamela Kyle Crossley</td>
+                <td>University of California Press</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="article-name"><a href="https://www.blackwellpublishing.com/book.asp?ref=9780631235910"
+                        rel="noopener noreferrer" target="_blank">The Manchus</a></td>
+                <td>Pamela Kyle Crossley</td>
+                <td>Wiley-Blackwell</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="article-name"><a
+                        href="https://press.princeton.edu/books/paperback/9780691008776/orphan-warriors"
+                        rel="noopener noreferrer" target="_blank">Orphan Warriors: Three Manchu Generations and the End
+                        of the Qing World</a></td>
+                <td>Pamela Kyle Crossley</td>
+                <td>Princeton University Press</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="article-name"><a href="https://www.hup.harvard.edu/books/9780674057432"
+                        rel="noopener noreferrer" target="_blank">China Marches West: The Qing Conquest of Central
+                        Eurasia</a></td>
+                <td>Peter C. Perdue</td>
+                <td>Harvard University Press</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="article-name"><a
+                        href="https://www.helion.co.uk/military-history-books/the-army-of-the-manchu-empire-the-conquest-army-and-the-imperial-army-of-qing-china-1600-1727.php"
+                        rel="noopener noreferrer" target="_blank">The Army of the Manchu Empire: The Conquest Army
+                        andthe Imperial Army of Qing China, 1600-1727</a></td>
+                <td>Michael Fredholm von Essen</td>
+                <td>Helion &amp; Company</td>
+                <td>Hardback</td>
             </tr>
         </tbody>
+        <table class="wishlist">
+            <thead>
+                <tr>
+                    <th>Nom de l'article</th>
+                    <th>Auteur</th>
+                    <th>Édition</th>
+                    <th>Priorité</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="article-name"><a href="https://www.belin-editeur.com/la-terre-avant-les-dinosaures"
+                            rel="noopener noreferrer" target="_blank">La Terre avant les dinosaures</a></td>
+                    <td>Jean-Sébastien Steyer - Alain Bénéteau</td>
+                    <td>Belin Éditeur</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="article-name"><a
+                            href="https://www.amazon.fr/Br%C3%A8ve-Histoire-Dinosaures-M%C3%A9sozo%C3%AFque-France/dp/1716444667"
+                            rel="noopener noreferrer" target="_blank">Une Brève Histoire des Dinosaures du Mésozoïque de France</a></td>
+                    <td>Nicolas Rey</td>
+                    <td>Éditions du Jaguar</td>
+                    <td></td>
+                </tr>
+            </tbody>
+            <!-- ------------------------------------------- BD ------------------------------------------- ---->
+            <h2 class="category-subtitle">BD</h2>
+            <table class="wishlist">
+                <thead>
+                    <tr>
+                        <th>Nom de l'article</th>
+                        <th>Auteurs</th>
+                        <th>Édition</th>
+                        <th>Priorité</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="article-name"><a
+                                href="http://www.ki-oon.com/mangas/tomes-1432-cauchemar-d-innsmouth.html"
+                                rel="noopener noreferrer" target="_blank">Le Cauchemar d'Innsmouth, tome 1</a></td>
+                        <td>Gou tanabe</td>
+                        <td>Ki-oon</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="article-name"><a
+                                href="http://www.ki-oon.com/mangas/tomes-1496-cauchemar-d-innsmouth.html"
+                                rel="noopener noreferrer" target="_blank">Le Cauchemar d'Innsmouth, tome 2</a></td>
+                        <td>Gou tanabe</td>
+                        <td>Ki-oon</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="article-name"><a href="http://www.ki-oon.com/mangas/tomes-1546-molosse.html"
+                                rel="noopener noreferrer" target="_blank">Le Molosse</a></td>
+                        <td>Gou tanabe</td>
+                        <td>Ki-oon</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="article-name"><a
+                                href="http://www.ki-oon.com/mangas/tomes-1657-abomination-de-dunwich.html"
+                                rel="noopener noreferrer" target="_blank">L'Abomination de Dunwich, tome 1</a></td>
+                        <td>Gou tanabe</td>
+                        <td>Ki-oon</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="article-name"><a
+                                href="http://www.ki-oon.com/mangas/tomes-1738-abomination-de-dunwich.html"
+                                rel="noopener noreferrer" target="_blank">L'Abomination de Dunwich, tome 2</a></td>
+                        <td>Gou tanabe</td>
+                        <td>Ki-oon</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="article-name"><a
+                                href="http://www.ki-oon.com/mangas/tomes-1800-abomination-de-dunwich.html"
+                                rel="noopener noreferrer" target="_blank">L'Abomination de Dunwich, tome 3</a></td>
+                        <td>Gou tanabe</td>
+                        <td>Ki-oon</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <table class="wishlist">
+                    <thead>
+                        <tr>
+                            <th>Nom de l'article</th>
+                            <th>Auteur</th>
+                            <th>Édition</th>
+                            <th>Priorité</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="article-name"><a
+                                    href="https://www.dargaud.com/bd/les-mondes-daldebaran/bellatrix/bellatrix-tome-1-bellatrix-tome-1-bda5493680"
+                                    rel="noopener noreferrer" target="_blank">Bellatrix - Tome 1</a></td>
+                            <td>Leo</td>
+                            <td>Dargaud</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="article-name"><a
+                                    href="https://www.dargaud.com/bd/les-mondes-daldebaran/bellatrix/bellatrix-tome-2-bellatrix-tome-2-bda5574050"
+                                    rel="noopener noreferrer" target="_blank">Bellatrix - Tome 2</a></td>
+                            <td>Leo</td>
+                            <td>Dargaud</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                    <table class="wishlist">
+                        <thead>
+                            <tr class="table-title">
+                                <td colspan="4">Colonisation</td>
+                            </tr>
+                            <tr>
+                                <th>Nom de l'article</th>
+                                <th>Auteur</th>
+                                <th>Édition</th>
+                                <th>Priorité</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="article-name"><a
+                                        href="https://www.glenat.com/24x32-glenat-bd/colonisation-tome-04-9782344032459"
+                                        rel="noopener noreferrer" target="_blank">Tome 4 - Expiation</a></td>
+                                <td>Denis-Pierre Filippi</td>
+                                <td>Glénat</td>
+                                <td></td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="article-name"><a
+                                        href="https://www.glenat.com/24x32-glenat-bd/colonisation-tome-05-9782344032466"
+                                        rel="noopener noreferrer" target="_blank">Tome 5 - Sédition</a></td>
+                                <td>Denis-Pierre Filippi</td>
+                                <td>Glénat</td>
+                                <td></td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="article-name"><a
+                                        href="https://www.glenat.com/24x32-glenat-bd/colonisation-tome-06-9782344040010"
+                                        rel="noopener noreferrer" target="_blank">Tome 6 - Unité Shadow</a></td>
+                                <td>Denis-Pierre Filippi</td>
+                                <td>Glénat</td>
+                                <td></td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="article-name"><a
+                                        href="https://www.glenat.com/24x32-glenat-bd/colonisation-tome-07-9782344040027"
+                                        rel="noopener noreferrer" target="_blank">Tome 7 - Répercussions</a></td>
+                                <td>Denis-Pierre Filippi</td>
+                                <td>Glénat</td>
+                                <td></td>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="wishlist">
+                        <thead>
+                            <tr class="table-title">
+                                <td colspan="4">Le Monde d'Aquilon</td>
+                            </tr>
+                            <tr>
+                                <th>Nom de l'article</th>
+                                <th>Auteur</th>
+                                <th>Édition</th>
+                                <th>Priorité</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="article-name"><a
+                                        href="https://www.monde-aquilon.com/catalogue/"
+                                        rel="noopener noreferrer" target="_blank"></a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="wishlist">
+                        <thead>
+                            <tr class="table-title">
+                                <td colspan="4">Le donjon de Naheulbeuk</td>
+                            </tr>
+                            <tr>
+                                <th>Nom de l'article</th>
+                                <th>Auteur</th>
+                                <th>Édition</th>
+                                <th>Priorité</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="article-name"><a
+                                        href=""
+                                        rel="noopener noreferrer" target="_blank"></a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </table>
+            </table>
+        </table>
     </table>
-
-    <h2 class="category-title">Wishlist : Jeux</h2>
-    <table class="wishlist">
-        <thead>
-            <tr>
-                <th>Nom de l'article</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>The Legend of Zelda: Breath of the Wild</td>
-                <td class="actions"><a href="#">Acheter</a></td>
-            </tr>
-            <tr>
-                <td>God of War: Ragnarök</td>
-                <td class="actions"><a href="#">Acheter</a></td>
-            </tr>
-        </tbody>
-    </table>
-
-    <h2 class="category-title">Wishlist : Figurines</h2>
-    <table class="wishlist">
-        <thead>
-            <tr>
-                <th>Nom de l'article</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Figurine Marvel: Spider-Man</td>
-                <td class="actions"><a href="#">Acheter</a></td>
-            </tr>
-            <tr>
-                <td>Figurine Star Wars: Dark Vador</td>
-                <td class="actions"><a href="#">Acheter</a></td>
-            </tr>
-        </tbody>
-    </table>
-
 </body>
+
 </html>
+<!-- <tr>
+    <td class="article-name"></td>
+    <td>/td>
+    <td></td>
+    <td class="actions"><a href="#"></a></td>
+</tr> -->
